@@ -1,0 +1,145 @@
+.section {
+	padding-top: 61px;
+	padding-bottom: 100px;
+	position: relative;
+
+	@media (min-width: $md2+px) {
+		padding-top: 91px;
+		padding-bottom: 150px;
+	}
+	&-body {
+		position: relative;
+
+		@media (min-width: $md4+px) {
+			display: flex;
+		}
+
+		&:after {
+			@media (min-width: $md3+px) {
+				content: "";
+				position: absolute;
+				width: 4px;
+				height: 51px;
+				background-color: #a9946e;
+			}
+		}
+	}
+	&-col {
+		flex: 0 1 50%;
+
+		&__mod {
+			flex: 0 1 340px;
+		}
+	}
+
+	&-title {
+		color: #010101;
+		font-size: 32px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3.36px;
+		position: relative;
+		margin-bottom: 18px;
+
+		@media (min-width: $md3+px) {
+			font-size: 48px;
+			margin-bottom: 32px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+
+			width: 151px;
+			height: 1px;
+			border: 1px solid #000000;
+		}
+	}
+
+	&-text {
+		color: #464646;
+		line-height: 19px;
+		letter-spacing: 0.38px;
+		margin-bottom: 16px;
+		position: relative;
+
+		@media (min-width: $md3+px) {
+			line-height: 25px;
+			margin-bottom: 32px;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 11px;
+
+			width: 44px;
+			height: 4px;
+			background-color: #bea67c;
+		}
+	}
+	&__img {
+		padding-bottom: 64%;
+		box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
+	}
+
+	&__num {
+		color: #000000;
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2.7px;
+		position: absolute;
+		bottom: 0;
+		padding-right: 5px;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 7px;
+			right: 0;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: #bea67c;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 4px;
+			height: 51px;
+			background-color: #a9946e;
+			left: 50%;
+			margin-left: -2px;
+			bottom: -115px;
+		}
+		@media (max-width: $md2+px) {
+			bottom: -45px;
+
+			&:before {
+				bottom: -65px;
+			}
+		}
+	}
+	&__name {
+		opacity: 0.2;
+		color: #d0d0d0;
+		font-size: 169px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3.36px;
+		position: absolute;
+
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__letter {
+		opacity: 0.07;
+		color: #bea67c;
+		font-family: "Proxima Nova";
+		font-size: 396px;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: absolute;
+	}
+}

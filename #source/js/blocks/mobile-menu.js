@@ -2,7 +2,7 @@
 //====================  Mobile Menu ========================//
 $('.header-menu__icon').click(function (event) {
 	$(this).toggleClass('active');
-	$('.header-menu__mobile').toggleClass('active');
+	$('.header-menu').toggleClass('active');
 });
 
 

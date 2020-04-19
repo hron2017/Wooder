@@ -1,0 +1,132 @@
+.section-04 {
+	background-image: url(../img/play-bg.png), url(../img/play-bg-01.png);
+	background-position: 80%, center;
+	background-size: 42%, cover;
+	background-repeat: no-repeat, no-repeat;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 135px;
+	@media (min-width: $md3+px) {
+		padding: 90px 0px;
+	}
+
+	.section-title {
+		color: #bea67c;
+
+		@media (max-width: $md3+px) {
+			font-size: 22px;
+		}
+		@media (max-width: $md2+px) {
+			font-size: 32px;
+			margin-bottom: 8px;
+		}
+		&:before {
+			border: 1px solid #fff;
+			top: 14px;
+			left: -171px;
+		}
+	}
+	.section-text {
+		color: #fff;
+		@media (max-width: $md2+px) {
+			line-height: 16px;
+		}
+		&:before {
+			left: -75px;
+		}
+	}
+	.section-btn {
+		color: #fff;
+		@include anim(0.5s, 0s);
+		padding: 10px 12px 10px 60px;
+		@media (min-width: $md2+px) {
+			padding: 24px 77px 24px 107px;
+		}
+		&:after {
+			display: none;
+		}
+		&:before {
+			content: "\f144";
+			font-family: "FontAwesome";
+			width: inherit;
+			height: inherit;
+			background-color: inherit;
+			bottom: inherit;
+			font-size: 23px;
+			top: 50%;
+			left: 20px;
+			transform: translateY(-50%);
+
+			@media (min-width: $md2+px) {
+				left: 50px;
+			}
+		}
+
+		&:hover {
+			color: #bea67c;
+			&:before {
+				@include anim(0.5s, 0s);
+				color: #bea67c;
+			}
+		}
+	}
+}
+.section-contant {
+	position: absolute;
+
+	@media (min-width: $md3+px) {
+		top: 50%;
+		left: 53%;
+		transform: translate(-50%, -50%);
+	}
+	@media (min-width: $md4+px) and (max-width: $md3+px) {
+		margin-left: 122px;
+	}
+}
+.section-video {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+
+	@media (max-width: $md3+px) {
+		min-height: 198px;
+	}
+	@media (min-width: $md3+px) {
+		border: 2px solid #bea67c;
+		padding-bottom: 40.25%;
+	}
+	video {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__close {
+		position: absolute;
+		opacity: 0;
+		top: -16px;
+		right: 0px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #bea67c;
+		color: #000;
+		font-size: 17px;
+		cursor: pointer;
+
+		@media (min-width: $md3+px) {
+			top: -25px;
+			right: -25px;
+			width: 50px;
+			height: 50px;
+			font-size: 28px;
+		}
+	}
+}

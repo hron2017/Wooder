@@ -1,7 +1,198 @@
 //====================================================================================================
+.header {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 31px;
+	padding-bottom: 31px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	&-body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-brand-name {
+		color: #ffffff;
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 10.8px;
+		position: relative;
 
-//====================================================================================================
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50px;
+			margin: -2px;
+			width: 64px;
+			height: 4px;
+			background-color: #bea67c;
+		}
+	}
+}
+.page-menu {
+	margin-left: 230px;
+	display: none;
+	@media (min-width: 1200px) {
+		display: block;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	li {
+		margin-right: 100px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		opacity: 0.5;
+		color: #ffffff;
+		font-family: "Proxima Nova";
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 27px;
+		text-transform: uppercase;
+		letter-spacing: 0.38px;
+		@include anim(0.3s, 0s);
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.header-langs {
+	display: flex;
+	align-items: center;
+	&__info {
+		color: #ffffff;
+		opacity: 0.5;
+		font-size: 16px;
+		margin-right: 16px;
+		@media (min-width: $md3+px) {
+			font-size: 23px;
+			margin-right: 52px;
+		}
+	}
+	&__lang {
+		opacity: 0.5;
+		color: #ffffff;
+		font-family: "Proxima Nova";
+		font-size: 15px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.75px;
+		position: relative;
+		padding-right: 12px;
+		cursor: pointer;
+		i {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			color: #a9946e;
+		}
+	}
+}
+.header-menu {
+	position: fixed;
+	width: 100%;
+
+	top: -200%;
+	left: 0;
+	height: 100vh;
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@include anim(0.5s, 0s);
+
+	@media (min-width: $md3+px) {
+		width: 30.7%;
+	}
+	&.active {
+		top: 0;
+	}
+	&__list {
+		li {
+			text-align: center;
+		}
+	}
+	&__link {
+		font-size: 32px;
+		line-height: 48px;
+		border-bottom: 2px solid transparent;
+		display: block;
+		color: #fff;
+		@include anim(0.5s, 0s);
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
+	}
+}
+.header-menu__icon {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	width: 30px;
+	height: 18px;
+	padding-left: 30px;
+	cursor: pointer;
+	z-index: 5;
+	color: #ffffff;
+	font-weight: 700;
+	line-height: 27px;
+	text-transform: uppercase;
+	letter-spacing: 0.38px;
+	opacity: 0.5;
+	span {
+		@include anim(0.3s, 0s);
+		top: 8px;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #bea67c;
+		&:first-child {
+			top: 0px;
+		}
+		&:last-child {
+			top: auto;
+			bottom: 0px;
+		}
+	}
+	&.active {
+		span {
+			@include scale(0);
+			&:first-child {
+				@include rotate(-45deg);
+				top: 8px;
+			}
+			&:last-child {
+				@include rotate(45deg);
+				bottom: 8px;
+			}
+		}
+	}
+}
+
 /*
+font-family: "FontAwesome";
+
+
+
+\f1d8 <i class="far fa-paper-plane"></i>  - самолетик
+\f10d <i class="fas fa-quote-left"></i>  - кавычки
+\f00e <i class="fas fa-search-plus"></i>
+\f0c1 <i class="fas fa-link"></i>  --  линк
+\f061 <i class="fas fa-arrow-right"></i>
+\f060 <i class="fas fa-arrow-left"></i>
+\f107 <i class="fas fa-angle-down"></i>  -  angle-down
+\f106 <i class="fas fa-angle-up"></i>  -  angle-up
 \f3cd - телефон
 \f058 - check
 \f406 - account
@@ -9,63 +200,18 @@
 \f07a, <i class="fas fa-shopping-cart"></i>
 \f005, <i class="fas fa-star"></i> - звезда
 \f1b9, <i class="fas fa-car"></i>
-
-
-f0e0
-<i class="fas fa-envelope"></i> - конверт
-
-f879
-<i class="fas fa-phone-alt"></i> - трубка телефона
-
-f3c5
-<i class="fas fa-map-marker-alt"></i> - локация
-
-f017
-<i class="far fa-clock"></i> - часы
-
-
+\f2f6, <i class="fas fa-sign-in-alt"></i> - лог ин
+\f0e0, <i class="fas fa-envelope"></i> - конверт
+\f879, <i class="fas fa-phone-alt"></i> - трубка телефона
+\f3c5, <i class="fas fa-map-marker-alt"></i> - локация
+\f017, <i class="far fa-clock"></i> - часы
 
 
 СОЦСЕТИ
+\f39e, <i class="fab fa-facebook-f"></i>
+\f099, <i class="fab fa-twitter"></i>
+\f0d5, <i class="fab fa-google-plus-g"></i>
+\f231, <i class="fab fa-pinterest-p"></i>
+\f16d, <i class="fab fa-instagram"></i>
 
-f39e
-<i class="fab fa-facebook-f"></i>
-
-f099
-<i class="fab fa-twitter"></i>
-
-f0d5
-<i class="fab fa-google-plus-g"></i>
-
-f231
-<i class="fab fa-pinterest-p"></i>
-
-f16d
-<i class="fab fa-instagram"></i>
-
-
-
-
-*/
-/*
-	.header-menu__icon{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
 */

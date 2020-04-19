@@ -1,0 +1,42 @@
+.section-01 {
+	.section-body {
+		justify-content: flex-end;
+
+		&:after {
+			top: -115px;
+			right: 0;
+		}
+	}
+	.section-col__mod {
+		margin-right: 48px;
+	}
+	.section-title {
+		&:before {
+			left: 90%;
+			@media (min-width: $md4+px) {
+				left: initial;
+				right: 115%;
+			}
+		}
+	}
+	.section-text {
+		&:before {
+			left: 100%;
+			@media (min-width: $md4+px) {
+				left: initial;
+				right: 115%;
+			}
+		}
+	}
+	.section__name {
+		right: -50%;
+	}
+	.section__num {
+		left: 0;
+	}
+
+	.section__letter {
+		left: 349px;
+		bottom: 75%;
+	}
+}

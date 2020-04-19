@@ -1,0 +1,40 @@
+.section-02 {
+	.section-col__mod {
+		text-align: right;
+		margin-left: 48px;
+	}
+	.section__img {
+		@media (max-width: $md4+px) {
+			margin-bottom: 27px;
+		}
+	}
+	.section-title {
+		&:before {
+			right: 56%;
+			@media (min-width: $md4+px) {
+				right: initial;
+				left: 115%;
+			}
+		}
+	}
+	.section-text {
+		&:before {
+			right: 98%;
+			@media (min-width: $md4+px) {
+				right: initial;
+				left: 115%;
+			}
+		}
+	}
+
+	.section__name {
+		left: -27%;
+	}
+	.section__num {
+		right: 0;
+	}
+	.section__letter {
+		right: 277px;
+		bottom: 75%;
+	}
+}
