@@ -822,6 +822,9 @@ font-family: "FontAwesome";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (max-width: 767.98px) {
+    .intro-col__bg {
+      display: none; } }
 
 .intro-contant {
   position: absolute;
