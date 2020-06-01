@@ -76,7 +76,7 @@ $('.intro-slider').on('afterChange', function (event, slick, currentSlide, nextS
 //====================  Video  ========================//
 $('.play-btn').click(function (e) {
 	e.preventDefault();
-	$(this).parent().parent().find('.video-previw__poster, .section-contant').fadeOut();
+	$(this).parent().parent().find('.video-preview__poster, .section-contant').fadeOut();
 	$(this).parent().parent().find('video, .section-video__close').fadeIn().get(0).play();
 	$(this).parent().parent().find('.section-video__close').css("opacity", "1");
 	$(this).fadeOut();

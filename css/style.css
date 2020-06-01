@@ -164,7 +164,7 @@ body.ie .ibg img {
     width: 100%;
     height: 100%; }
 
-.video-previw {
+.video-preview {
   overflow: hidden;
   padding-bottom: 56.25%;
   width: 243px;
@@ -172,7 +172,7 @@ body.ie .ibg img {
   border-radius: 50%;
   position: absolute;
   top: 14px; }
-  .video-previw video {
+  .video-preview video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1124,15 +1124,15 @@ font-family: "FontAwesome";
       left: 50%;
       margin-left: -22px; }
 
-.video-previw__list li {
+.video-preview__list li {
   display: inline-block; }
   @media (min-width: 600px) {
-    .video-previw__list li {
+    .video-preview__list li {
       margin-right: 80px; }
-      .video-previw__list li:last-child {
+      .video-preview__list li:last-child {
         margin-right: 0; } }
 
-.video-previw__item {
+.video-preview__item {
   width: 272px;
   height: 272px;
   border: 1px solid #e1e1e1;
@@ -1141,7 +1141,7 @@ font-family: "FontAwesome";
   margin-bottom: 43px;
   position: relative; }
 
-.video-previw__poster {
+.video-preview__poster {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1149,15 +1149,15 @@ font-family: "FontAwesome";
   height: 100%;
   position: relative;
   z-index: 1; }
-  .video-previw__poster.poster-01 {
-    background-image: url(../img/video-previw__poster-01.png); }
-  .video-previw__poster.poster-02 {
-    background-image: url(../img/video-previw__poster-02.png); }
-  .video-previw__poster.poster-03 {
-    background-image: url(../img/video-previw__poster-03.png); }
+  .video-preview__poster.poster-01 {
+    background-image: url(../img/video-preview__poster-01.png); }
+  .video-preview__poster.poster-02 {
+    background-image: url(../img/video-preview__poster-02.png); }
+  .video-preview__poster.poster-03 {
+    background-image: url(../img/video-preview__poster-03.png); }
 
-.video-previw__play {
-  background-image: url(../img/video-previw__play.png);
+.video-preview__play {
+  background-image: url(../img/video-preview__play.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1176,19 +1176,19 @@ font-family: "FontAwesome";
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s; }
-  .video-previw__play:hover {
+  .video-preview__play:hover {
     -webkit-transform: translate(-50%, -50%) scale(1.3);
     -ms-transform: translate(-50%, -50%) scale(1.3);
     transform: translate(-50%, -50%) scale(1.3); }
 
-.video-previw__name {
+.video-preview__name {
   color: #000000;
   line-height: 24px;
   font-weight: bold;
   letter-spacing: 0.4px;
   position: relative;
   font-size: 16px; }
-  .video-previw__name:after {
+  .video-preview__name:after {
     content: "";
     position: absolute;
     top: -16px;
